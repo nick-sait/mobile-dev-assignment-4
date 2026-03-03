@@ -15,7 +15,6 @@ export default function HomeScreen() {
   const theme = colorScheme === "dark" ? Colors.dark : Colors.light;
   const styles = CreateStyles(theme);
 
-
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
@@ -95,11 +94,7 @@ export default function HomeScreen() {
   );
 }
 
-function CreateStyles({
-  theme,
-}: {
-  theme: any;
-}) {
+function CreateStyles(theme: any) {
   return StyleSheet.create({
     container: {
       flex: 1,
