@@ -5,14 +5,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 // WILL BE EMPLOYEE INFORMATION FORM
 
-export default function HomeScreen() {
+export default function LoginScreen() {
   const colorScheme = Appearance.getColorScheme();
   const theme = colorScheme === "dark" ? Colors.dark : Colors.light;
   const s = CreateStyles(theme);
 
   return (
     <SafeAreaView style={s.container}>
-      <Text style={s.header}>EMPLOYEE FORM</Text>
+      <Text style={s.header}>Login Screen</Text>
     </SafeAreaView>
   );
 }
