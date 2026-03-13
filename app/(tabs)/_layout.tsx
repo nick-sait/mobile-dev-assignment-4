@@ -26,15 +26,15 @@ export default function TabLayout() {
       <Tabs.Screen
         name="login"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Log-In',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.crop.circle.fill" color={color} />,
         }}
       />
       <Tabs.Screen
         name="sign-up"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Sign-Up',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.crop.circle.fill.badge.plus" color={color} />,
         }}
       />
     </Tabs>

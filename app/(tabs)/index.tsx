@@ -1,29 +1,29 @@
-import {
-  StyleSheet,
-  Appearance,
-  Text,
-  View,
-  TextInput,
-  Pressable,
-  TouchableOpacity,
-  KeyboardAvoidingView,
-  Platform,
-  Alert,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { Colors } from "@/constants/theme";
-import {
-  MaterialIcons,
-  MaterialCommunityIcons,
-  Fontisto,
-  Feather,
-} from "@expo/vector-icons";
-import { useState } from "react";
-import DateTimePicker from "@react-native-community/datetimepicker";
-import EmployeFormValidation from "@/components/validationSchemas/EmployeeFormValidation";
-import { Formik } from "formik";
 import Field from "@/components/ui/Field";
 import OptionModal from "@/components/ui/OptionModal";
+import EmployeFormValidation from "@/components/validationSchemas/EmployeeFormValidation";
+import { Colors } from "@/constants/theme";
+import {
+  Feather,
+  Fontisto,
+  MaterialCommunityIcons,
+  MaterialIcons,
+} from "@expo/vector-icons";
+import DateTimePicker from "@react-native-community/datetimepicker";
+import { Formik } from "formik";
+import { useState } from "react";
+import {
+  Alert,
+  Appearance,
+  KeyboardAvoidingView,
+  Platform,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   const colorScheme = Appearance.getColorScheme();
@@ -194,7 +194,7 @@ export default function HomeScreen() {
                   mode="date"
                   display={Platform.OS === "ios" ? "spinner" : "default"}
                   maximumDate={new Date()}
-                  onChange={(event, selectedDate) => {
+                  onChange={(_event: any, selectedDate: any) => {
                     if (Platform.OS === "android") {
                       setShowDatePicker(false);
                     }
